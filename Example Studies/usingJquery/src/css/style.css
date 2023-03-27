@@ -1,0 +1,41 @@
+/* template: award points to judge importance of X 
+> progress bar listening for input */
+progress[value] {
+  width: 60%;
+}
+
+.col1 {
+  float:left; 
+  width:49%;
+  text-align: right;
+}
+
+.col2 {
+  float:left; 
+  width:49%;
+  margin-left:30px;
+  text-align: left;
+}
+
+.clearfix:after {
+  clear:both;
+  content:"";
+  display: table;
+}
+
+
+
+/* template: drag and drop task 
+> ... */
+.dropzone {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+#singleItem {
+  background-color: gainsboro;
+}
