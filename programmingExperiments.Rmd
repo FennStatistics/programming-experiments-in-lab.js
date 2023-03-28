@@ -1049,17 +1049,44 @@ if component is set to tardy:
 
 <!-- *********** NEW SLIDE ************** -->
 ---
-## Page Builder
+## HTML Form and Page Builder
 
-...
+
+* a HTML Form is like a HTML screen, but listens to form submissions and extracts data
+* provide a validator option to check provided data
+
+````markdown
+// data is submitted in the second try
+var i = 0;
+study.options.validator = function(data){
+  debugger
+  if(i++ === 0){
+    return false;
+  } else{
+    return true;
+  }
+  debugger
+}
+````
+
+* Page Builder: provides a user-interface to build HTML form pages
+
+
 
 
 <!-- *********** NEW SLIDE ************** -->
 ---
-## HTML Form
+## real-time adjustements within Page Builder
 
-...
+* Page Builder creates content from item options
+  + these item options can be adjusted in real-time:
+  
+````markdown
+debugger
+this.options.items[1].width = 3
+````
 
+> important: in the before:prepare stage
 
 <!-- *********** HEADING ************** -->
 ---
@@ -1092,7 +1119,7 @@ Part 3: lab.js - local / global variables
 
 
 ````markdown
-study.options.content[0].end()
+study.options.content[0].end() // or debugger and this
 ````
 
 
